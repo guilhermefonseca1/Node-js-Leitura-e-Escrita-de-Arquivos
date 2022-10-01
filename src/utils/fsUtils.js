@@ -4,7 +4,7 @@ const path = require('path')
 async function readMissionsData() {
     try {
         const data = await fs.readFile(path.resolve(__dirname, '../../data/missions.json'))
-        console.log(data)
+        console.log(__dirname)
     } catch(error) {
         console.error(`Erro na leitura do arquivo: ${error}`)    
     }

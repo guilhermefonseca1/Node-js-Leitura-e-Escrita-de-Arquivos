@@ -1,5 +1,12 @@
 const fs = require('fs').promises;
 
-function readMissionsData() {
-    console.log
+async function readMissionsData() {
+    try {
+        const data = await fs.readFile('../../data/missions.json')
+        console.log(data)
+    } catch(error) {
+        console.error(`Erro na leitura do arquivo: ${error}`)
+    }
 }
+
+readMissionsData()

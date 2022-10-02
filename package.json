@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/guilhermefonseca1/Node-js-Leitura-e-Escrita-de-Arquivos/issues"
   },
-  "homepage": "https://github.com/guilhermefonseca1/Node-js-Leitura-e-Escrita-de-Arquivos#readme"
+  "homepage": "https://github.com/guilhermefonseca1/Node-js-Leitura-e-Escrita-de-Arquivos#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

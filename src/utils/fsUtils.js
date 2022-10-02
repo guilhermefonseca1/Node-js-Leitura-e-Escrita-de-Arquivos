@@ -12,6 +12,7 @@ async function readMissionsData() {
     }
 }
 
+async function
 module.exports = {
     readMissionsData
 } 

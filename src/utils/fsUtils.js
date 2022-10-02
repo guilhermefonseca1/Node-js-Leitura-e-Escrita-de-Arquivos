@@ -1,4 +1,5 @@
 const fs = require('fs').promises;
+const { networkInterfaces } = require('os');
 const path = require('path')
 const MISSION_DATA_PATH = '../../data/missions.json' 
 async function readMissionsData() {
@@ -15,7 +16,8 @@ async function readMissionsData() {
 async function writeNewMissionDate(newMission) {
     try {
         const oldMissions = await readMissionsData()
-        const allmissions = JSON.stringify([...oldMissions, newMission])
+        const allmissions = JSON.stringify([...oldMissions, { id: Date.now(), ...newMission }
+        ])
 
         await fs.writeFile(path.resolve(__dirname, MISSION_DATA_PATH), allmissions)
     } catch(error) {

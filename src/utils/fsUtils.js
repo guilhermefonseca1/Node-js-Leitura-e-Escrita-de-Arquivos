@@ -4,10 +4,14 @@ const path = require('path')
 async function readMissionsData() {
     try {
         const data = await fs.readFile(path.resolve(__dirname, '../../data/missions.json'))
-        console.log(__dirname)
+        const missions = JSON.parse(data)
+
+        return missions
     } catch(error) {
         console.error(`Erro na leitura do arquivo: ${error}`)    
     }
 }
 
-readMissionsData()
+module.exports = {
+    readMissionsData
+} 
